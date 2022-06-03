@@ -1,0 +1,10 @@
+const router = require('express').Router()
+const {ProduitVenteController} = require('../controllers')
+
+router.get('/',ProduitVenteController.index)
+router.get('/:id([0-9]+)',ProduitVenteController.show)
+router.post('/',ProduitVenteController.create)
+router.patch('/:id([0-9]+)',ProduitVenteController.update)
+router.delete('/:id([0-9]+)',ProduitVenteController.delete)
+
+module.exports  = router;
